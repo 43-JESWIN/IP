@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Creating Forms">
+        <title>Registration</title>
+    </head>
+    <style>        
+       
+        button[type="reset"]:hover{
+            background-color: red;
+            transform:scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        button[name="submit"]:hover{
+            background-color: green;
+            transform:scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+
+    <body>
+        <center>
+        <main>
+            <h1>ABC Academy🚀</h1>
+            <h4>Training |Tech News|Freshers Guide</h4>
+            <p>Empowering the young developers to level up their skills through training in software development technologies👦💻</p>
+        </main>
+        <hr>
+        <body>  
+              <table >
+                    <form>
+                        <thead aria-colspan="2">
+                            <center><h3>Registration Form</h3></center>
+                       </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"><label for="Name">Name : </label></td>
+                                <td colspan="2"><input id="Name"type="text" name="Name" required placeholder="Jeswin J" id="name"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><label for="Age">Age : </label></td>
+                                <td colspan="2"><input type="number"id="Age" min="10" max="60" step="1" placeholder="19" required/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><label for="Gender">Gender : </label></td>
+                                <td colspan="2"><input type="radio" id="Gender" name="Gender" value="Male"/>Male<input type="radio" name="Gender" id="Gender" value="Female"/>Female</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><label for="Dept">Select a Course : </label></td>
+                                <td colspan="2">
+                                    <select name="Dept">
+                                        <option value="Full Stack Developer">Full Stack Developer</option>
+                                        <option value="Web Developer">Web Developer</option>
+                                        <option value="Android Developer">Android Developer</option>
+                                        <option value="Software Developer">Software Developer</option>
+                                        <option value="UI/UX Designer">UI/UX Designer</option>
+                                        <option value="Programmer">Programmer</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><label for="Resume">Upload your Resume : </label></td>
+                                <td colspan="2"><input type="file" id="Resume" accept=".png,.jpg,.jpeg,.pdf" name="Resume" multiple/></td>
+                            </tr>
+                            <center>
+                            <tr>
+                                <td colspan="3"><button type="reset">Reset</button></td>
+                                <td colspan="2"><button name="submit">Submit</button></td>
+                            </tr>
+                            </center>
+                        </tbody>
+                    </form>
+                </table>
+         
+            <hr>
+            <a href="workout1a.html">Home |</a>
+            <a href=https://www.instagram.com/jeswin_j4693?igsh=M3h3M21zMTk1Nms5 target="_top">Instagram |</a>
+            <a href=https://www.youtu.be/wRNinF7YQqQ?si=GTnG-F8qELML9dKm target="_top">Youtube</a>
+        </center>
+    </body>  
+</html>

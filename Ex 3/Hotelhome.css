@@ -1,0 +1,178 @@
+body
+{
+    background-image: url(Background\ img.jpeg);
+    background-repeat:repeat;
+    color:whitesmoke;
+}
+.sign{
+    align-content:right;
+    font-size:30px; 
+    height:38px;
+    width:100px;
+    border:2px solid black;
+    border-radius:20px;
+    position:absolute;
+    right: 10px;
+    margin-top:-50px;
+    background-color:black;
+    padding:2px;
+}
+a{
+    color:orangered;
+}
+.sign a
+{
+    text-decoration: none;
+}
+p
+{
+    font-size: 25px;
+    text-align: justify;
+    transition: transform 0.5s,background-color 0.5s;
+}
+p:hover
+{
+    color: red;
+    transform: scaleX(1.1);
+
+}
+.des
+{
+    height:450px;
+    width:1600px;
+    border:2px solid black;
+    border-radius:30px;
+    display:inline-block;
+    padding:20px;
+    position:relative;
+    backdrop-filter: blur(20px);
+}
+.des:hover
+{
+    cursor:pointer;
+    transform:scaleZ(1.3);
+    background-color: gold;
+}
+.loc
+{
+    align-content:right;
+    font-size:30px; 
+    height:38px;
+    width:110px;
+    border:2px solid black;
+    border-radius:20px;
+    position:absolute;
+    right: 10px;
+    margin-top:-130px;
+    background-color:black;
+    padding:2px;
+}
+a{
+    color:orangered;
+}
+.loc a
+{
+    text-decoration: none;
+}
+.container
+{
+    display:flex;
+}
+.img1
+{
+   
+    margin:50px;
+    height:250px;
+    width:350px;
+    border:2px solid black;
+}
+.img1 img
+{
+    height:250px;
+    width:350px;
+    display:inline-block;
+}
+.img1:hover
+{
+    cursor:pointer;
+    transition:all 0.5s ease;
+    transform:scale(1.1);
+
+}
+.container2
+{
+    display:flex;
+}
+.img2
+{
+   
+    margin:50px;
+    height:250px;
+    width:350px;
+    border:2px solid black;
+}
+.img2 img
+{
+    height:250px;
+    width:350px;
+    display:inline-block;
+}
+.img2:hover
+{
+    cursor:pointer;
+    transition:all 0.5s ease;
+    transform:scale(1.1);
+
+}
+.content
+{
+   height:130px;
+   width:350px;
+   padding:6px;
+   box-sizing: border-box;
+   position:absolute;
+   margin-top:-70px;
+  
+}
+.content p
+{
+   
+    font-size:15px;
+    
+}
+.container2 .content
+{
+    height:130px;
+    width:350px;
+    padding:6px;
+    box-sizing: border-box;
+    position:absolute;
+    margin-top:-70px; 
+}
+.container h2 
+{
+    color:black;
+}
+.container2 h2 
+{
+    color:black;
+}
+.reg
+{
+    align-content:right;
+    font-size:30px; 
+    height:100px;
+    width:90px;
+    border:2px solid black;
+    border-radius:20px;
+    position:absolute;
+    right: 10px;
+    margin-top:-50px;
+    padding:2px;
+}
+
+.reg a
+{
+    text-decoration: none;
+    color:blue;
+}

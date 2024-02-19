@@ -1,0 +1,36 @@
+img{
+    width:150px;
+
+}
+
+#fixedImage {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.popup-form {
+    display: none;
+    position: fixed;
+    right: 20px;
+    padding:50px;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter:blur(20px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.popup-form .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Additional styles for button, container, etc. */

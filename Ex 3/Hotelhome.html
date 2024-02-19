@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <title>Hotel Home page</title>
+    <link rel="stylesheet" href="Hotelhome.css">
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<style>
+    h1 {
+        font-size: 70px;
+        text-shadow: 2px 2px 5px black;
+        transition: all 0.5s ease-in-out;
+    }
+
+    h1:hover {
+        cursor: pointer;                                                            
+        color: red;
+    }
+
+</style>
+<body>
+    <center><h1 style="text-shadow:2px 2px 5px black; font-size:70px">JS Royalcourt</h1></center>
+    <div class="sign"><a href="Hotel_login.html">Sign in</a></div>
+    <br>
+    <div class="loc"><a href="https://g.co/kgs/Zj6C4Hn">Location</a></div>
+    <hr>
+    <div class="des"><h2>Description</h2>
+    <p>The JS Royalcourt (also known as The JSRC) is a luxury hotel and condominium apartment building in 
+    <i>Midtown Manhattan in New York City</i>. It is located on the western side of Grand Army, after which it is named, just west of Fifth Avenue, and is between 58th Street and Central Park South 
+    (a.k.a. 59th Street), at the southeastern corner of Central Park. Its primary address is 768 Fifth Avenue, though the residential entrance is One Central Park South. Since 2018, the hotel has been the owned by the 
+    Qatari firm Katara Hospitality.</p>
+    <br>
+    <p>Opened in 1907 and designated an official landmark in 1969, The JS Royalcourt is arguably the most famous hotel in New York.</p>
+    <br>
+    <p>Located on Fifth Avenue and Central Park South, the 20-story building is the setting of the 1950s “Eloise” children’s book series and 
+    the backdrop for classic films such as “Funny Girl,” “The Great Gatsby” and “Home Alone 2: Lost in New York.”
+    Notable guests have included Liza Minnelli, Eleanor Roosevelt, Miles Davis and The Beatles. The hotel offers weekly tours
+    of its interior to the public, led by an architectural historian.</p>
+    <br>
+    <h2>We are famous for....</h2>
+    <div class="container">
+        <div class="img1">
+            <img src="location.jpg">
+            <div class="content"><h2>Location</h2><p>Idyllic location just steps away from worlds class dining,shopping and entertainment
+                including the Broadway theatre district
+            </p>
+            </div>
+        </div>
+        <div class="img1">
+            <img src="views.jpg">
+            <div class="content"><h2>Views</h2><p>Idyllic location just steps away from worlds class dining,shopping and entertainment
+                including the Broadway theatre district
+            </p>
+            </div>
+        </div>
+        <div class="img1">
+            <img src="pool.jpg">
+            <div class="content"><h2>Swimming Pool</h2><p>Idyllic location just steps away from worlds class dining,shopping and entertainment
+                including the Broadway theatre district
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="img2">
+            <img src="hall.jpeg">
+            <div class="content"><h2>Hall</h2><p>Idyllic location just steps away from worlds class dining,shopping and entertainment
+                including the Broadway theatre district
+            </p>
+            </div>
+        </div>
+        <div class="img2">
+            <img src="room.webp">
+            <div class="content"><h2>Bedroom</h2><p>Idyllic location just steps away from worlds class dining,shopping and entertainment
+                including the Broadway theatre district
+            </p>
+            </div>
+        </div>
+        <div class="img2">
+            <img src="washroom.webp">
+            <div class="content"><h2>Water Closet</h2><p>Idyllic location just steps away from worlds class dining,shopping and entertainment
+                including the Broadway theatre district
+            </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<img id="fixedImage" src="book.png" alt="Fixed Image" onclick="scrollToForm()">
+    <div id="bookingForm" class="popup-form">
+        <span class="close" onclick="closeForm()">&times;</span>
+        <h2>Hotel Room Booking Form</h2>
+<form action="#" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <br>
+
+    <label for="room-type">Room Type:</label>
+    <select id="room-type" name="room-type">
+        <option value="standard">Standard Room</option>
+        <option value="deluxe">Deluxe Room</option>
+        <option value="suite">Suite</option>
+    </select>
+    <br>
+    <br>
+
+    <label for="check-in">Check-in Date:</label>
+    <input type="date" id="check-in" name="check-in" required>
+    <br>
+    <br>
+
+    <label for="check-out">Check-out Date:</label>
+    <input type="date" id="check-out" name="check-out" required>
+    <br>
+    <br>
+
+    <input type="submit" value="Book Now">
+    <br>
+    <br>
+</form>
+    </div>
+
+    <script src="book.js"></script>
+
+</body>
+

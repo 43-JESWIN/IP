@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Objects Program</title>
+</head>
+<body>
+
+<h2>Compare Objects Program Output:</h2>
+
+<div id="compareObjectsOutput"></div>
+
+<script>
+    function compareObjects(obj1, obj2) {
+        var keys1 = Object.keys(obj1).sort();
+        var keys2 = Object.keys(obj2).sort();
+
+        if (keys1.length !== keys2.length) {
+            return false;
+        }
+
+        for (var i = 0; i < keys1.length; i++) {
+            if (keys1[i] !== keys2[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    var obj1 = {a: 1, b: 2, c: 3};
+    var obj2 = {c: 3, b: 2, a: 1};
+    alert(document.getElementById('compareObjectsOutput').innerText = compareObjects(obj1, obj2));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Date Program</title>
+</head>
+<body>
+
+<h2>Current Date Program Output:</h2>
+
+<div id="currentDateOutput"></div>
+
+<script>
+    function getCurrentDate() {
+        var now = new Date();
+        var month = (now.getMonth() + 1).toString().padStart(2, '0');
+        var day = now.getDate().toString().padStart(2, '0');
+        var year = now.getFullYear();
+
+        var mmddyyyy = `${month}-${day}-${year}`;
+        var mmddyyyy_slash = `${month}/${day}/${year}`;
+        var ddmmyyyy = `${day}-${month}-${year}`;
+        var ddmmyyyy_slash = `${day}/${month}/${year}`;
+
+        return `${mmddyyyy}, ${mmddyyyy_slash} or ${ddmmyyyy}, ${ddmmyyyy_slash}`;
+    }
+
+    alert(document.getElementById('currentDateOutput').innerText = getCurrentDate());
+</script>
+
+</body>
+</html>

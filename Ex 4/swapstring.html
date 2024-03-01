@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Case Program</title>
+</head>
+<body>
+
+<h2>Swap Case Program Output:</h2>
+
+<div id="swapCaseOutput"></div>
+
+<script>
+    function swapCase(str) {
+        var swapped = "";
+        for (var i = 0; i < str.length; i++) {
+            var char = str[i];
+            if (char === char.toUpperCase()) {
+                swapped += char.toLowerCase();
+            } else {
+                swapped += char.toUpperCase();
+            }
+        }
+        return swapped;
+    }
+
+    var input = "The Quick Brown Fox";
+    var output = swapCase(input);
+    alert(document.getElementById('swapCaseOutput').innerText = output);
+</script>
+
+</body>
+</html>

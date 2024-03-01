@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock Program</title>
+</head>
+<body>
+
+<h2>Clock Program Output:</h2>
+
+<div id="clockOutput"></div>
+
+<script>
+    function Clock() {
+        this.getCurrentTime = function() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            return `${hours}:${minutes}:${seconds}`;
+        };
+
+        this.updateDisplay = function() {
+            var currentTime = this.getCurrentTime();
+            var outputDiv = document.getElementById('clockOutput');
+            outputDiv.innerText += currentTime+ "<--->"
+        };
+
+        this.start = function() {
+            this.updateDisplay();
+            setInterval(() => {
+                this.updateDisplay();
+            }, 1000);
+        };
+    }
+
+    var clock = new Clock();
+    clock.start();
+</script>
+
+</body>
+</html>

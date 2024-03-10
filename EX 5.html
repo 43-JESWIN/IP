@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Validation</title>
+    <style>
+        .error-message {
+            color:whitesmoke;
+            background-color: red;
+            margin-left: 450px;
+            margin-top:-12px;
+            position:fixed;
+        }
+
+        .success-message {
+            color: whitesmoke;
+            background-color: greenyellow;
+            margin-left: 450px;
+            margin-top:20px;
+            position:fixed;
+        }
+
+        button {
+            position:absolute;
+            top: 500px;
+            left: 300px;
+            background-color: blue;
+            color:aliceblue;
+            height:50px;
+            width: 150px;
+            border-radius: 30px;
+        }
+        .container
+        {
+            padding:40px;
+            height:540px;
+            width: 700px;
+            border:2px solid black;
+            display:inline block;
+            border-radius:30px;     
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h2 >JavaScript Form Validation</h2>
+    <div class="container">
+    <form id="myform">
+        Name <input type="text" id="name">
+        <div id="name_error" class="error-message"></div>
+        <div id="name_success" class="success-message"></div>
+        <br>
+        <br>
+
+        Age: <input type="number" id="Age">
+        <div id="age_success" class="success-message"></div>
+        <br>
+        <br>
+        Birth Date: <input type="datetime-local" id="dob">
+        <br>
+        <br>
+        Email: <input type="email" id="email">
+        <div id="email_error" class="error-message"></div>
+        <br>
+        <br>
+        Continent:
+        <select id="cont">
+            <option value="">Select</option>
+            <option value="AS">Asia</option>
+            <option value="AF">Africa</option>
+            <option value="EU">Europe</option>
+            <option value="AU">Australia</option>
+            <option value="NA">North America</option>
+            <option value="SA">South America</option>
+        </select>
+        <div id="select_error" class="error-message"></div>
+        <br>
+        <br>
+        Are you Cool?
+        <input type="radio" name="mr" id="yes"> Yes
+        <input type="radio" name="mr" id="no"> No
+        <div id="cool_error" class="error-message"></div>
+        <br>
+
+        Which 2 colors do you like most?:
+        <select id="colors" multiple>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="black">Black</option>
+        </select>
+        <div id="selectclr_error" class="error-message"></div>
+        <br>
+        <br>
+
+        What do you like?:
+        <input type="checkbox" name="like" id="codeIgniter"> CodeIgniter
+        <input type="checkbox" name="like" id="fuel"> Fuel
+        <input type="checkbox" name="like" id="cpp"> C++
+        <input type="checkbox" name="like" id="laravel"> Laravel
+        <input type="checkbox" name="like" id="zend"> Zend
+        <div id="cbox_error" class="error-message"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myform").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var fname = document.getElementById("name").value;
+            var errormsg = document.getElementById("name_error");
+            var scsmsg = document.getElementById("name_success");
+            var agescs = document.getElementById("Age").value;
+            var erroremail = document.getElementById("email").value;
+            var errorem_msg = document.getElementById("email_error");
+            var continent = document.getElementById("cont").value;
+            var cont_error = document.getElementById("select_error");
+            var cool_input = document.getElementsByName("mr");
+            var cool_er = document.getElementById("cool_error");
+            var cols = document.querySelectorAll("#colors option:checked");
+            var cols_error = document.getElementById("selectclr_error");
+            var checkbox = document.querySelectorAll("like");
+            var chebox_error = document.getElementById("cbox_error");
+            var selected = false;
+            var checked = false;
+
+            if (fname.trim() === "") {
+                errormsg.textContent = "Enter name";
+            } else {
+                scsmsg.textContent = "Nice name";
+            }
+
+            if (agescs >= 30) {
+                scsmsg.textContent = "You are wise";
+            }
+
+            if (erroremail.trim() === "") {
+                errorem_msg.textContent = "Email is required";
+            }
+
+            if (continent.trim() === "") {
+                cont_error.textContent = "Select your continent";
+            }
+
+            for (var i = 0; i < cool_input.length; i++) {
+                if (cool_input[i].checked) {
+                    selected = true;
+                    break;
+                }
+            }
+
+            if (!selected) {
+                cool_er.textContent = "Select whether you are cool or not.";
+            }
+
+            if (cols.length !== 2) {
+                cols_error.textContent = "Select any 2 colors";
+                return;
+            }
+
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].selected) {
+                    selected= true;
+                    break;
+                }
+            }
+
+            if (!selected) {
+                chebox_error.textContent = "Select which options you like.";
+                return;
+            }
+
+            errormsg.textContent = "";
+            scsmsg.textContent = "";
+            scsmsg.textContent = "You are wise";
+            errorem_msg.textContent = "";
+            cont_error.textContent = "";
+            cool_er.textContent = "";
+            cols_error.textContent = "";
+            chebox_error.textContent = "";
+         
+            alert("Successfully Registered");
+        });
+    </script>
+</div>
+</body>
+</html>
+
+

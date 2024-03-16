@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count Vowels</title>
+<style>
+    body
+    {
+        height: 100px;
+        width: 200px;
+        padding: 50px;
+        border:2px solid black;
+        border-radius: 20px;
+
+    }
+   
+   
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#countBtn").click(function(){
+    var inputText = $("#textInput").val().toLowerCase(); // Convert input to lowercase
+    var vowelCount = 0;
+    var vowels = "aeiou";
+    for (var i = 0; i < inputText.length; i++) {
+      if (vowels.indexOf(inputText[i]) !== -1) {
+        vowelCount++;
+      }
+    }
+    $("#result").text("Number of vowels: " + vowelCount);
+  });
+});
+</script>
+</head>
+<body>
+
+<input type="text" id="textInput" placeholder="Enter text">
+<br>
+<br>
+<button id="countBtn">Count Vowels</button>
+<p id="result"></p>
+
+</body>
+</html>

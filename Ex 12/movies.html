@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Details</title>
+</head>
+<body>
+  <label for="movieId">Enter Movie ID:</label>
+  <input type="text" id="movieId">
+  <button onclick="getMovieDetails()">Get Details</button>
+  <div id="movieDetails"></div>
+
+  <script>
+    function getMovieDetails() {
+      var movieId = document.getElementById('movieId').value;
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            var movieXml = xhr.responseXML;
+            if (movieXml) {
+              var movies = movieXml.getElementsByTagName('movie');
+              var found = false;
+              for (var i = 0; i < movies.length; i++) {
+                var id = movies[i].getElementsByTagName('id')[0].textContent;
+                if (id === movieId) {
+                  var title = movies[i].getElementsByTagName('title')[0].textContent;
+                  var director = movies[i].getElementsByTagName('director')[0].textContent;
+                  var year = movies[i].getElementsByTagName('year')[0].textContent;
+                  document.getElementById('movieDetails').innerHTML = "<h2>" + title + "</h2><p>Directed by: " + director + "</p><p>Year: " + year + "</p>";
+                  found = true;
+                  break;
+                }
+              }
+              if (!found) {
+                document.getElementById('movieDetails').innerHTML = "<p>No movie found with ID " + movieId + "</p>";
+              }
+            } else {
+              console.error('Failed to parse XML');
+            }
+          } else {
+            console.error('Failed to fetch movie details. Status: ' + xhr.status);
+          }
+        }
+      };
+      xhr.open('GET', 'movies.xml', true);
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

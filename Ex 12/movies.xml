@@ -1,0 +1,26 @@
+<movies>
+  <movie>
+    <id>1</id>
+    <title>Leo</title>
+    <director>Lokesh Kanagaraj</director>
+    <year>2023</year>
+  </movie>
+  <movie>
+    <id>2</id>
+    <title>Beast</title>
+    <director>Nelson</director>
+    <year>2022</year>
+  </movie>
+  <movie>
+    <id>3</id>
+    <title>GOAT</title>
+    <director>Venkat Prabhu</director>
+    <year>2024</year>
+  </movie>
+  <movie>
+    <id>4</id>
+    <title>The Dark Knight</title>
+    <director>Christopher Nolan</director>
+    <year>2008</year>
+  </movie>
+</movies>

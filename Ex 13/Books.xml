@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<books>
+<book>
+<title>The Da Vinci Code</title>
+<author>Dan Brown</author>
+<genre>Mystery</genre>
+<price>20.00</price>
+</book>
+<book>
+<title>To Kill a Mockingbird</title>
+<author>Harper Lee</author>
+<genre>Fiction</genre>
+<price>15.50</price>
+</book>
+<book>
+<title>Gone Girl</title>
+<author>Gillian Flynn</author>
+<genre>Mystery</genre>
+<price>27.99</price>
+</book>
+<book>
+<title>The Great Gatsby</title>
+<author>F. Scott Fitzgerald</author>
+<genre>Classic</genre>
+<price>10.99</price>
+</book>
+</books>
